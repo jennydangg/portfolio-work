@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jenny Dang Navigation</title>
+  <title>Jenny Dang Work Overview</title>
   <style>
     body {
       margin: 0;
@@ -40,7 +40,6 @@
       color: white;
     }
 
-    /* Dropdown menu styles */
     .dropdown {
       position: relative;
     }
@@ -78,8 +77,71 @@
     .dropdown:hover .dropdown-menu {
       display: block;
     }
+
+    /* Overview page styles */
+    .overview-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: white;
+    }
+
+    .overview-header h1 {
+      font-size: 40px;
+      color: #d46e91;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .overview-grid {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .overview-card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .overview-card:hover {
+      transform: scale(1.05);
+    }
+
+    .overview-card h2 {
+      font-size: 22px;
+      color: #d46e91;
+      margin-bottom: 10px;
+    }
+
+    .overview-card p {
+      color: #555;
+      font-size: 16px;
+    }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -98,5 +160,27 @@
     </ul>
   </nav>
 
+  <div class="overview-header">
+    <h1>overview of my work</h1>
+  </div>
+
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h2>rebrands / strategy</h2>
+      <p>Modernizing brands through research, visual identity, and storytelling.</p>
+    </div>
+
+    <div class="overview-card">
+      <h2>posters</h2>
+      <p>Creative posters for events, mental health awareness, and campaigns.</p>
+    </div>
+
+    <div class="overview-card">
+      <h2>digital / other</h2>
+      <p>Website redesigns, UX/UI prototypes, social media graphics, and more.</p>
+    </div>
+  </div>
+
 </body>
 </html>
+
