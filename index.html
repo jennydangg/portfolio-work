@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jenny Dang Navigation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffd6e4;
+    }
+
+    nav {
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffd6e4;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #d46e91;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    /* Dropdown menu styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #ffd6e4;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      list-style-type: none;
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 8px;
+      top: 100%;
+      left: 0;
+      z-index: 999;
+      min-width: 150px;
+    }
+
+    .dropdown-menu li {
+      padding: 8px 20px;
+      text-align: left;
+    }
+
+    .dropdown-menu li a {
+      color: #d46e91;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">home</a></li>
+      <li><a href="https://jennydangg.github.io/Portfolio-Home/">about</a></li>
+      <li class="dropdown">
+        <a href="#portfolio">work</a>
+        <ul class="dropdown-menu">
+          <li><a href="#branding">rebrands/strategy</a></li>
+          <li><a href="#poster">posters</a></li>
+          <li><a href="#strategy">other</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
